@@ -20,7 +20,6 @@ def game():
             if event.type == QUIT:
                 continue_game = False
 
-        time.sleep(20)
 
 
 def welcome():
@@ -38,8 +37,7 @@ def initialize():
     print("Initializing...")
     load_config()
 
-    pygame.init()
-
+    pygame.init()   
     display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 
 
