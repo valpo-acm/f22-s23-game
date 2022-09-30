@@ -9,12 +9,19 @@ WINDOW_HEIGHT = 800
 WINDOW_WIDTH = 600
 
 
+class Character:
+    def __init__(self, name: str):
+        print("Hello, my name is ", name)
+
+
 def game():
     print("Starting Game")
 
     continue_game = True
 
     while continue_game:
+
+        character = Character("Jordan")
 
         for event in pygame.event.get():
             if event.type == QUIT:
