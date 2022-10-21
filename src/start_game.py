@@ -2,11 +2,14 @@
 
 import time
 import pygame
-from pygame.locals import *
+from pygame.constants import QUIT
+#from pygame.locals import *
 
 
 WINDOW_HEIGHT = 800
 WINDOW_WIDTH = 600
+
+display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 
 
 def game():
@@ -32,14 +35,14 @@ def welcome():
 def load_config():
     print("Loading config...")
 
-
 def initialize():
     print("Initializing...")
     load_config()
 
-    pygame.init()   
-    display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
-
+    pygame.init()
+    pygame.display.set_caption("Game name TBD")
+    display_surface.fill((194,63,16))
+    pygame.display.update()
 
 def close():
     print("Closing...")
