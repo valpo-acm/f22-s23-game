@@ -8,8 +8,8 @@ class Boss(Character):
         super().__init__(char_id, movement, max_health, default_weapon, special_ability, height)
         print("I am a boss enemy! Prepare for a real challenge!")
 
-    def enemy_attack(self):
+    def boss_attack(self):
         print("Attack")
 
-    def enemy_jump(self):
+    def boss_jump(self):
         print("Jump")
