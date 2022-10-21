@@ -3,23 +3,37 @@
 import time
 import pygame
 from pygame.locals import *
-
+from pygame.constants import QUIT
+import pygame_menu
 
 WINDOW_HEIGHT = 800
 WINDOW_WIDTH = 600
 
+display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
+
 
 def game():
     print("Starting Game")
-
+    menu = pygame_menu.Menu("TestMenu", 200, 200)
+    menu.add.button("Test", test_button)
     continue_game = True
 
     while continue_game:
 
-        for event in pygame.event.get():
+        events = pygame.event.get()
+        for event in events:
             if event.type == QUIT:
                 continue_game = False
 
+        if menu.is_enabled():
+            menu.update(events)
+            menu.draw(display_surface)
+
+        pygame.display.update()
+
+
+def test_button():
+    print("Pressed Test Button")
 
 
 def welcome():
@@ -37,8 +51,11 @@ def initialize():
     print("Initializing...")
     load_config()
 
-    pygame.init()   
-    display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
+    pygame.init()
+    pygame.init()
+    pygame.display.set_caption("Game name TBD")
+    display_surface.fill((194, 63, 16))
+    pygame.display.update()
 
 
 def close():
