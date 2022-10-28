@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 
-import time
 import pygame
 from pygame.locals import *
 from pygame.constants import QUIT
 import pygame_menu
 
+
 WINDOW_HEIGHT = 720
 WINDOW_WIDTH = 1280
+
+display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 
 display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 
@@ -46,17 +48,14 @@ def welcome():
 def load_config():
     print("Loading config...")
 
-
 def initialize():
     print("Initializing...")
     load_config()
 
     pygame.init()
-    pygame.init()
-    pygame.display.set_caption("Game name TBD")
-    display_surface.fill((194, 63, 16))
+    pygame.display.set_caption("Blob Warrior")
+    display_surface.fill((194,63,16))
     pygame.display.update()
-
 
 def close():
     print("Closing...")
