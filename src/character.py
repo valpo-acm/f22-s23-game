@@ -1,4 +1,3 @@
-
 import uuid
 from movement import Movement
 from weapon import Weapon

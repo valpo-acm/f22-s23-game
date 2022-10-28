@@ -4,12 +4,10 @@ import pygame
 from pygame.locals import *
 from pygame.constants import QUIT
 import pygame_menu
-
+from background import Background
 
 WINDOW_HEIGHT = 720
 WINDOW_WIDTH = 1280
-
-display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 
 display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 
@@ -19,6 +17,7 @@ def game():
     menu = pygame_menu.Menu("TestMenu", 400, 400)
     menu.add.button("Test", test_button)
     continue_game = True
+    background = Background()
 
     while continue_game:
 
@@ -32,6 +31,8 @@ def game():
             menu.draw(display_surface)
 
         pygame.display.update()
+
+        background.render(display_surface, WINDOW_WIDTH, WINDOW_HEIGHT)
 
 
 def test_button():
@@ -48,14 +49,16 @@ def welcome():
 def load_config():
     print("Loading config...")
 
+
 def initialize():
     print("Initializing...")
     load_config()
 
     pygame.init()
     pygame.display.set_caption("Blob Warrior")
-    display_surface.fill((194,63,16))
+    display_surface.fill((194, 63, 16))
     pygame.display.update()
+
 
 def close():
     print("Closing...")
