@@ -6,15 +6,15 @@ from pygame.locals import *
 from pygame.constants import QUIT
 import pygame_menu
 
-WINDOW_HEIGHT = 800
-WINDOW_WIDTH = 600
+WINDOW_HEIGHT = 720
+WINDOW_WIDTH = 1280
 
 display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 
 
 def game():
     print("Starting Game")
-    menu = pygame_menu.Menu("TestMenu", 200, 200)
+    menu = pygame_menu.Menu("TestMenu", 400, 400)
     menu.add.button("Test", test_button)
     continue_game = True
 

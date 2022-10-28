@@ -1,3 +1,6 @@
+from src.movement import Movement
+
+
 class Character:
     health: int
     current_weapon = None
