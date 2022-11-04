@@ -1,5 +1,6 @@
 from level_structure import LevelStructure
 
+
 class FlatStructure(LevelStructure):
 
     def __init__(self, length: int, height: int, origin: (int, int), type: str):

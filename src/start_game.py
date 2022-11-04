@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 import pygame
-from pygame.locals import *
-from pygame.constants import QUIT
 import pygame_menu
+from pygame.constants import QUIT
+
 from background import Background
 
 WINDOW_HEIGHT = 720

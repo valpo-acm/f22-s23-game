@@ -1,5 +1,7 @@
 import uuid
+
 import pygame.sprite
+
 from weapon import Weapon
 
 
@@ -8,10 +10,11 @@ class Character(pygame.sprite.Sprite):
     current_weapon = None
     shield_hand = None
     powerups = []
-    direction_facing = False # False = Left; True = Right
+    direction_facing = False  # False = Left; True = Right
 
     def __init__(self, max_health: int,
-                 default_weapon: Weapon, special_ability, movement_speed: int, height: int, jump_height: int, ducking_height: int,
+                 default_weapon: Weapon, special_ability, movement_speed: int, height: int, jump_height: int,
+                 ducking_height: int,
                  sliding_height: int):
         print("Hello! I am a character!")
 
@@ -22,12 +25,12 @@ class Character(pygame.sprite.Sprite):
         self.default_weapon = default_weapon
         self.special_ability = special_ability
 
-class Movement:
 
+class Movement:
     x_loc: int = 0
-    y_loc: int = 0 # should be located at the feed
+    y_loc: int = 0  # should be located at the feed
     is_ducking = False
-    is_sliding = False #can remove this later but just an idea
+    is_sliding = False  # can remove this later but just an idea
     is_jumping = False
 
     def __init__(self, movement_speed: int, height: int, jump_height: int, ducking_height: int,
@@ -47,7 +50,7 @@ class Movement:
 
     def slide_end(self):
         # IF THERE IS A BLOCK ABOVE
-            # KEEP SLIDING
+        # KEEP SLIDING
         # ELSE
         self.is_sliding = False
 

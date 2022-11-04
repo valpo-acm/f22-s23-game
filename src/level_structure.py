@@ -1,18 +1,19 @@
 import pygame.sprite
 
+
 class LevelStructure(pygame.sprite.Sprite):
     length: int
     height: int
     origin: (int, int)
     is_moving_horizontal = False
     is_moving_vertical = False
-    is_walkthrough = False #looks like background but can jump on top of
+    is_walkthrough = False  # looks like background but can jump on top of
     is_rotating = False
-    rotate_direction = False #False = left, True = right
+    rotate_direction = False  # False = left, True = right
     causes_damage = False
     is_slippery = False
 
-    def __init__(self, length: int, height: int, origin: (int,int), struct_type: str):
+    def __init__(self, length: int, height: int, origin: (int, int), struct_type: str):
         super().__init__()
         self.length = length
         self.height = height
