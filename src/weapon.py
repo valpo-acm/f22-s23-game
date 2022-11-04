@@ -1,5 +1,5 @@
 from enum import Enum
-#can change weapon types later if needed
+
 class Weapon_Type(Enum):
     PISTOL = 0 # standard/starter weapon
     SHOTGUN = 1 #high damage/medium fire rate
