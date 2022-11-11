@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-import time
 import pygame
 from pygame.constants import QUIT
 #from pygame.locals import *
@@ -40,7 +39,7 @@ def initialize():
     load_config()
 
     pygame.init()
-    pygame.display.set_caption("Game name TBD")
+    pygame.display.set_caption("Blob Warrior")
     display_surface.fill((194,63,16))
     pygame.display.update()
 
