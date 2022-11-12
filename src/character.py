@@ -2,6 +2,7 @@ import uuid
 import pygame.sprite
 from weapon import Weapon
 
+
 class Character(pygame.sprite.Sprite):
     health: int
     current_weapon = None
@@ -20,6 +21,7 @@ class Character(pygame.sprite.Sprite):
         self.max_health = max_health
         self.default_weapon = default_weapon
         self.special_ability = special_ability
+
 
 class Movement:
 

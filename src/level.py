@@ -22,6 +22,8 @@ class Level:
     structures = [] # if we need moving structures, so they can be accessed
     difficulty: Difficulty
     timer: int = None # if None, there is no timer
+    current_score: int
+    high_score: int
 
     def __init__(self):
        pass
@@ -31,7 +33,6 @@ class Level:
 
     def level_prepare(self):
         self.generate_structures()
-
 
         self.level_start()
 

@@ -1,6 +1,7 @@
 from character import Character
 from weapon import Weapon
 
+
 class Boss(Character):
     def __init__(self, max_health: int, default_weapon: Weapon,
                  special_ability, height: int, movement_speed: int, jump_height: int, ducking_height: int,

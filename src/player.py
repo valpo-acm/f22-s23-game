@@ -11,10 +11,8 @@ class Player(Character):
         self.height = height
         print("Hello World")
 
-
-    def player_attack(self):
+    def attack(self):
         print("Attack")
 
-
-    def player_jump(self):
+    def jump(self):
         print("Jump")

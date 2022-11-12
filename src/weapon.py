@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class Weapon_Type(Enum):
     PISTOL = 0 # standard/starter weapon
     SHOTGUN = 1 #high damage/medium fire rate
@@ -7,6 +8,7 @@ class Weapon_Type(Enum):
     SNIPER = 3 #low fire rate/high damage
     SMG = 4 #high fire rate/low damage
     RPG = 5 #low fire rate/high damage/area damage
+
 
 class Weapon:
     ammo: int

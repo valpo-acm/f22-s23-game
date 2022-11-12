@@ -1,10 +1,9 @@
 import pygame.sprite
+import pygame.draw
 
 
 class LevelStructure(pygame.sprite.Sprite):
-    length: int
-    height: int
-    origin: (int, int)
+    origin: (int, int) # upper left corner
     is_moving_horizontal = False
     is_moving_vertical = False
     is_walkthrough = False  # looks like background but can jump on top of
@@ -13,36 +12,9 @@ class LevelStructure(pygame.sprite.Sprite):
     causes_damage = False
     is_slippery = False
 
-    def __init__(self, length: int, height: int, origin: (int, int), struct_type: str):
+    def __init__(self, shape_type: pygame.draw, origin: (int, int), struct_type: str):
         super().__init__()
-        self.length = length
-        self.height = height
+        self.shape_type = shape_type
         self.origin = origin
         self.struct_type = struct_type
 
-    def change_length(self, new_length):
-        self.length = new_length
-
-    def change_height(self, new_height):
-        self.height = new_height
-
-
-class RoundStructure(LevelStructure):
-    radius: int
-
-    def __init__(self, length: int, height: int, origin: (int, int), type: str):
-        super().__init__(length, height, origin, type)
-        print("This is a round structure (i.e. circle/ellipse)")
-
-
-class SlopedStructure(LevelStructure):
-    def __init__(self, length: int, height: int, origin: (int, int), type: str):
-        super().__init__(length, height, origin, type)
-        print("This is a sloped structure (i.e. triangle)")
-
-
-class FlatStructure(LevelStructure):
-
-    def __init__(self, length: int, height: int, origin: (int, int), type: str):
-        super().__init__(length, height, origin, type)
-        print("I am a flat structure (i.e. rectangle/square)")
